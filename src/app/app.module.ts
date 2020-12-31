@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { AuthModule } from '@modules/auth/auth.module';
 import { CoreModule } from '@app/core.module';
 import { SharedModule } from '@shared/shared.module';
+import { LayoutModule } from '@layout/layout.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -15,6 +16,7 @@ import { SharedModule } from '@shared/shared.module';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    LayoutModule,
     // 3rd party
     AuthModule,
 

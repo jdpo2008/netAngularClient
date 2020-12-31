@@ -5,7 +5,8 @@ import { AuthGuard } from '@app/guards/auth.guard';
 //import { NoAuthGuard } from '@app/guard/no-auth.guard';
 import { throwIfAlreadyLoaded } from '@app/guards/module-import.guard';
 
-import { TokenInterceptor } from '@app/interceptors/token.interceptor.ts';
+import { TokenInterceptor } from '@app/interceptors/http-token.interceptor';
+import { HttpErrorInterceptor } from '@app/interceptors/http-error.interceptor';
 
 @NgModule({
   imports: [HttpClientModule],
@@ -16,6 +17,11 @@ import { TokenInterceptor } from '@app/interceptors/token.interceptor.ts';
       provide: HTTP_INTERCEPTORS,
       useClass: TokenInterceptor,
       multi: true,
+    },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: HttpErrorInterceptor,
+      multi: true
     },
   ],
 })

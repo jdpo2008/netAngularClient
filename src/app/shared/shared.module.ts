@@ -2,8 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-
-//import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import {
   FontAwesomeModule,
@@ -42,6 +41,7 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 
 import { MaterialModule } from './material.module';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 //import { ControlMessagesComponent } from './component/control-messages/control-messages.component';
 //import { SpinnerComponent } from './component/spinner/spinner.component';
@@ -52,8 +52,9 @@ import { MaterialModule } from './material.module';
     FormsModule,
     ReactiveFormsModule,
     RouterModule,
-    //MaterialModule,
-    //NgbModule,
+    FlexLayoutModule,
+    MaterialModule,
+    NgbModule,
     FontAwesomeModule,
   ],
   declarations: [],
@@ -63,7 +64,8 @@ import { MaterialModule } from './material.module';
     ReactiveFormsModule,
     RouterModule,
     MaterialModule,
-    //NgbModule,
+    FlexLayoutModule,
+    NgbModule,
     FontAwesomeModule,
     //ControlMessagesComponent,
     //SpinnerComponent

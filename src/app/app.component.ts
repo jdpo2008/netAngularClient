@@ -11,11 +11,11 @@ export class AppComponent implements OnInit {
   title = 'netAngularClient';
 
   ngOnInit(): void {
-    this.authService
-      .AuthenticateAsync({
-        Email: 'jdpo2008@gmail.com',
-        Password: '123Pa$$word!',
-      })
-      .subscribe((resp) => console.log(resp));
+    // this.authService
+    //   .AuthenticateAsync({
+    //     Email: 'jdpo2008@gmail.com',
+    //     Password: '123Pa$$word!',
+    //   })
+    //   .subscribe((resp) => console.log(resp));
   }
 }

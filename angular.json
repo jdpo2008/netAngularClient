@@ -21,6 +21,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "allowedCommonJsDependencies": ["lodash", "@angular/cdk"],
             "outputPath": "dist/netAngularClient",
             "index": "src/index.html",
             "main": "src/main.ts",
